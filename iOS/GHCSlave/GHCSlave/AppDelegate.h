@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+extern int pfd[2];
+void setupPipe();
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

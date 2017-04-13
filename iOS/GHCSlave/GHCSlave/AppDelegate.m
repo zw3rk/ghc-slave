@@ -5,8 +5,22 @@
 //  Created by Moritz Angermann on 4/11/17.
 //  Copyright © 2017 Moritz Angermann. All rights reserved.
 //
+int pfd[2];
 
 #import "AppDelegate.h"
+
+void
+setupPipe() {
+
+    /* make stdout line-buffered and stderr unbuffered */
+    setvbuf(stdout, 0, _IOLBF, 0);
+    setvbuf(stderr, 0, _IONBF, 0);
+    
+    /* create the pipe and redirect stdout and stderr */
+    pipe(pfd);
+    dup2(pfd[1], 1);
+    dup2(pfd[1], 2);
+}
 
 @interface AppDelegate ()
 
