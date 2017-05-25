@@ -14,6 +14,8 @@ cmake_minimum_required(VERSION 3.4.1)
 
 add_library( native-lib     SHARED src/main/cpp/GHCSlave.c    )
 
+add_library( stub-lib       SHARED src/main/cpp/iostub.c      )
+
 # add_subdirectory( src/ghc/rts )
 
 # Searches for a specified prebuilt library and stores the path as a

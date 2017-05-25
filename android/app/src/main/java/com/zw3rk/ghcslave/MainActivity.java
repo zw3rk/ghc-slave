@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
         PrintStream ps = new PrintStream(os, true);
 
-        String socketName = startLocalSocketServer(ps);
+        String socketName = startLocalSocketServer(ps /* System.out */);
 
         pipeStdOutToSocket(socketName);
 

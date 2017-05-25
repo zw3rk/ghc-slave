@@ -36,8 +36,8 @@ Java_com_zw3rk_GHCSlave_startSlave(JNIEnv *env,
   argv[2] = "-Di";
   argv[3] = "-RTS";
 
-  hs_init(&argc, &argv);
-  //hs_init(NULL,NULL);
+//  hs_init(&argc, &argv);
+  hs_init(NULL,NULL);
   setLineBuffering();
   const char *docroot = (*env)->GetStringUTFChars(env, jDocRoot, JNI_FALSE);
   startSlave(jVerbose, jPort, docroot);
