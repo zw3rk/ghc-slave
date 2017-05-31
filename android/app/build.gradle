@@ -5,20 +5,18 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.zw3rk.ghcslave"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-//                arguments "-DARM64=ON", "-DICONV_LIBRARY_PATH=/Users/angerman/libiconv/aarch64-linux-android/lib"
                 cppFlags ""
             }
         }
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
-//            abiFilters 'arm64-v8a'
         }
     }
     externalNativeBuild {

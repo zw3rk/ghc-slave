@@ -1,3 +1,9 @@
+
+# Created by https://www.gitignore.io/api/java,swift,xcode,haskell,androidstudio
+
+### AndroidStudio ###
+# Covers files to be ignored for android development using Android Studio.
+
 # Built application files
 *.apk
 *.ap_
@@ -14,8 +20,12 @@ gen/
 out/
 
 # Gradle files
-**/.gradle/
+.gradle
+.gradle/
 build/
+
+# Signing files
+.signing/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -26,39 +36,147 @@ proguard/
 # Log Files
 *.log
 
-# Android Studio Navigation editor temp files
-**/.navigation/
-
-# Android Studio captures folder
+# Android Studio
+/*/build/
+/*/local.properties
+/*/out
+/*/*/build
+/*/*/production
 captures/
+.navigation/
+*.ipr
+*~
+*.swp
 
-# Intellij
-*.iml
-**/.idea/workspace.xml
-**/.idea/tasks.xml
-**/.idea/gradle.xml
-**/.idea/dictionaries
-**/.idea/libraries
-
-# Keystore files
-*.jks
+# Android Patch
+gen-external-apklibs
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
 
-# Google Services (e.g. APIs or Firebase)
+# NDK
+obj/
+
+# IntelliJ IDEA
+*.iml
+*.iws
+/out/
+
+# User-specific configurations
+.idea/libraries/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/datasources.xml
+.idea/dataSources.ids
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+# Keystore files
+*.jks
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Legacy Eclipse project files
+.classpath
+.project
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs (Reference: http://www.java.com/en/download/help/error_hotspot.xml)
+hs_err_pid*
+
+## Plugin-specific files:
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Mongo Explorer plugin
+.idea/mongoSettings.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+### AndroidStudio Patch ###
+# Google Services plugin
 google-services.json
 
-# Freeline
-freeline.py
-freeline/
-freeline_project_description.json
+!/gradle/wrapper/gradle-wrapper.jar
+
+### Haskell ###
+dist
+dist-*
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+cabal.project.local
+.HTF/
+
+### Java ###
+# Compiled class file
+
+# Log file
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+
+# Package Files #
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+
+### Swift ###
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
-build/
 DerivedData/
 
 ## Various settings
@@ -83,20 +201,20 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
 
-# Carthage
+# Swift Package Manager
 #
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+.build/
 
-Carthage/Build
+# CocoaPods - Refactored to standalone file
+
+# Carthage - Refactored to standalone file
 
 # fastlane
 #
@@ -110,29 +228,42 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
-# Code Injection
-#
-# After new code Injection tools there's a generated folder /iOSInjectionProject
-# https://github.com/johnno1962/injectionforxcode
+### Swift.CocoaPods Stack ###
+## CocoaPods GitIgnore Template
 
-iOSInjectionProject/
-dist
-dist-*
-cabal-dev
-*.o
-*.hi
-*.chi
-*.chs.h
-*.dyn_o
-*.dyn_hi
-.hpc
-.hsenv
-**/.cabal-sandbox/
-cabal.sandbox.config
-*.prof
-*.aux
-*.hp
-*.eventlog
-**/.stack-work/
-cabal.project.local
-.HTF/
+# CocoaPods - Only use to conserve bandwidth / Save time on Pushing
+#           - Also handy if you have a lage number of dependant pods
+#           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGONRE THE LOCK FILE
+Pods/
+
+### Swift.Carthage Stack ###
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+### Xcode ###
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+
+## Various settings
+
+## Other
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
+# End of https://www.gitignore.io/api/java,swift,xcode,haskell,androidstudio
+app/hs-libs
+arm64-v8a
+armeabi-v7a
+/**/hs/*_stub.h

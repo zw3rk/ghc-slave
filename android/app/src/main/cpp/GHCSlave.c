@@ -28,15 +28,15 @@ Java_com_zw3rk_GHCSlave_startSlave(JNIEnv *env,
                                    jint jPort,
                                    jstring jDocRoot )
 {
-  int argc = 4;
-
-  char ** argv = malloc(sizeof(char*)*4);
-  argv[0] = "GHCSlave";
-  argv[1] = "+RTS";
-  argv[2] = "-Di";
-  argv[3] = "-RTS";
-
+//  int argc = 4;
+//
+//  char ** argv = malloc(sizeof(char*)*4);
+//  argv[0] = "GHCSlave";
+//  argv[1] = "+RTS";
+//  argv[2] = "-Di";
+//  argv[3] = "-RTS";
 //  hs_init(&argc, &argv);
+
   hs_init(NULL,NULL);
   setLineBuffering();
   const char *docroot = (*env)->GetStringUTFChars(env, jDocRoot, JNI_FALSE);
