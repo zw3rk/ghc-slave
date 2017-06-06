@@ -263,7 +263,9 @@ Carthage/Build
 /*.gcno
 
 # End of https://www.gitignore.io/api/java,swift,xcode,haskell,androidstudio
-app/hs-libs
+/**/hs-libs
 arm64-v8a
 armeabi-v7a
 /**/hs/*_stub.h
+
+RPi/Slave
