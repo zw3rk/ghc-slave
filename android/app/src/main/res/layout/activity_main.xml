@@ -76,7 +76,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ipv4" />
+                app:layout_constraintTop_toBottomOf="@+id/ipv4"/>
         </LinearLayout>
     </ScrollView>
 

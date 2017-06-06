@@ -108,6 +108,6 @@ public class MainActivity extends AppCompatActivity {
         pipeStdOutToSocket(socketName);
 
         GHCSlave c = new GHCSlave();
-        startSlave(true, 5000, this.getFilesDir().getAbsolutePath());
+        startSlave(false, 5000, this.getFilesDir().getAbsolutePath());
     }
 }
